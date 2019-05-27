@@ -1,0 +1,70 @@
+{
+    "identityPoolName": "todoappd873e0dd_identitypool_d873e0dd",
+    "allowUnauthenticatedIdentities": true,
+    "lambdaLogPolicy": "todoap_d873e0dd_lambda_log_policy",
+    "openIdLambdaRoleName": "todoap_d873e0dd_openid_lambda_role",
+    "openIdRolePolicy": "todoap_d873e0dd_openid_pass_role_policy",
+    "openIdLambdaIAMPolicy": "todoap_d873e0dd_openid_lambda_iam_policy",
+    "openIdLogPolicy": "todoap_d873e0dd_openid_lambda_log_policy",
+    "userPoolName": "todoappd873e0dd_userpool_d873e0dd",
+    "autoVerifiedAttributes": [
+        "email"
+    ],
+    "mfaConfiguration": "OPTIONAL",
+    "mfaTypes": [
+        "SMS Text Message"
+    ],
+    "roleName": "todoapd873e0dd_sns-role",
+    "roleExternalId": "todoapd873e0dd_role_external_id",
+    "policyName": "todoapd873e0dd-sns-policy",
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+        "email"
+    ],
+    "userpoolClientName": "todoapd873e0dd_app_client",
+    "userpoolClientGenerateSecret": true,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+        "email"
+    ],
+    "userpoolClientReadAttributes": [
+        "email"
+    ],
+    "mfaLambdaRole": "todoapd873e0dd_totp_lambda_role",
+    "mfaLambdaLogPolicy": "todoapd873e0dd_totp_lambda_log_policy",
+    "mfaPassRolePolicy": "todoapd873e0dd_totp_pass_role_policy",
+    "mfaLambdaIAMPolicy": "todoapd873e0dd_totp_lambda_iam_policy",
+    "userpoolClientLambdaRole": "todoapd873e0dd_userpoolclient_lambda_role",
+    "userpoolClientLogPolicy": "todoapd873e0dd_userpoolclient_lambda_log_policy",
+    "userpoolClientLambdaPolicy": "todoapd873e0dd_userpoolclient_lambda_iam_policy",
+    "userpoolClientSetAttributes": false,
+    "resourceName": "todoappd873e0dd",
+    "authSelections": "identityPoolAndUserPool",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    },
+    "unauthRoleArn": {
+        "Fn::GetAtt": [
+            "UnauthRole",
+            "Arn"
+        ]
+    },
+    "useDefault": "manual",
+    "thirdPartyAuth": false,
+    "hostedUI": false
+}
